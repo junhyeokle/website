@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>My Retro Portfolio</title>
+
+  <!-- NES.css -->
+  <link href="https://unpkg.com/nes.css@latest/css/nes.min.css" rel="stylesheet" />
+
+  <!-- 픽셀 폰트 (달무리) -->
+  <style>
+    @font-face {
+      font-family: 'Dalmuri';
+      src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2102-01@1.0/dalmoori.woff') format('woff');
+      font-weight: normal;
+      font-style: normal;
+    }
+
+    body {
+      font-family: 'Dalmuri', 'Press Start 2P', sans-serif;
+      background-color: #f8f8f8;
+      padding: 30px;
+      line-height: 1.6;
+    }
+
+    header, section {
+      margin-bottom: 40px;
+    }
+
+    /* 제목 스타일 강화 */
+    .nes-container.with-title > .title {
+      font-size: 22px;
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+
+    /* Progress bar 강화 */
+    .nes-progress {
+      height: 24px;
+      margin-bottom: 8px;
+    }
+
+    /* Quest 상태별 색상 */
+    .quest-done {
+      color: gray;
+      text-decoration: line-through;
+    }
+    .quest-progress {
+      color: #2e8b57; /* 녹색 */
+      font-weight: bold;
+    }
+    .quest-locked {
+      color: #888;
+      opacity: 0.7;
+    }
+
+    /* 버튼 hover 효과 */
+    .nes-btn:hover {
+      filter: brightness(1.1);
+      transform: scale(1.03);
+      transition: 0.15s;
+    }
+  </style>
+</head>
+<body>
+  <!-- About Me -->
+  <section class="nes-container with-title is-rounded" 
+           style="font-size:18px; display:flex; align-items:center; gap:40px;">
+    <h2 class="title">About Me</h2>
+
+    <!-- 왼쪽 (Kirby + 말풍선) -->
+    <section class="message-list" 
+             style="flex:1; display:flex; align-items:flex-end; gap:10px;">
+      <i class="nes-kirby" style="align-self:flex-end; margin-bottom:-25px;"></i>
+      <div class="nes-balloon from-left">
+        <p>
+          <strong>이준혁</strong><br>
+          🎓 경희대학교 / 소프트웨어융합학과 23th<br>
+          🕹️ Level 24<br>
+          📅 Birth: 2002-05-23
+        </p>
+      </div>
+    </section>
+
+    <!-- 오른쪽 (Exp 컨테이너) -->
+    <section class="nes-container is-rounded" 
+             style="flex:1; font-size:18px; align-self:center;">
+      <h3>👾 다음 레벨까지 경험치</h3>
+      <p>Level 25 → 2026-01-01 달성 예정</p>
+      <progress class="nes-progress is-success" value="50" max="100"></progress>
+      <p>Exp: 50 / 100</p>
+    </section>
+  </section>
+
+  <!-- Skills / Stats -->
+  <section class="nes-container with-title is-rounded" style="font-size:18px; margin-top:20px;">
+    <h2 class="title">📊 Stats</h2>
+
+    <p>⚔️ 알고리즘 (Attack)</p>
+    <progress class="nes-progress is-primary" value="80" max="100"></progress>
+    <p>80 / 100</p>
+
+    <p>🛡️ 자료구조 (Defense)</p>
+    <progress class="nes-progress is-success" value="70" max="100"></progress>
+    <p>70 / 100</p>
+
+    <p>✨ 머신러닝 (Magic)</p>
+    <progress class="nes-progress is-warning" value="40" max="100"></progress>
+    <p>40 / 100</p>
+
+    <p>💻 웹 개발 (Agility)</p>
+    <progress class="nes-progress is-error" value="30" max="100"></progress>
+    <p>30 / 100</p>
+
+    <p>🏋️ 운동/체력 (HP)</p>
+    <progress class="nes-progress is-pattern" value="90" max="100"></progress>
+    <p>90 / 100</p>
+  </section>
+
+  <!-- Quest / Goals -->
+  <section class="nes-container with-title is-rounded" style="font-size:18px; margin-top:20px;">
+    <h2 class="title">🗡️ Quests</h2>
+    <ul class="nes-list is-disc">
+      <li class="quest-done">✅ <strong>알고리즘 Gold 5 달성</strong> (2025) — Clear!</li>
+      <li class="quest-progress">🔄 <strong>NES.css 포트폴리오 제작</strong> (진행 중)</li>
+      <li>🎯 <strong>학기 성적 4.3/4.3 달성</strong> (2025-2학기 목표)</li>
+      <li class="quest-locked">🔒 <strong>머신러닝 프로젝트</strong> (Coming Soon)</li>
+      <li>🛡️ <strong>공군 복무 중 개인 프로젝트</strong> (2026~2027 예정)</li>
+    </ul>
+  </section>
+
+  <!-- Contact -->
+  <section class="nes-container with-title is-rounded" style="font-size:18px; margin-top:20px;">
+    <h2 class="title">📨 Contact</h2>
+
+    <p>
+      <i class="nes-icon gmail is-medium"></i>
+      <strong>학교 메일:</strong> yourschool@univ.ac.kr
+    </p>
+
+    <p>
+      <i class="nes-icon gmail is-medium"></i>
+      <strong>개인 메일:</strong> yourname@gmail.com
+    </p>
+
+    <button type="button" class="nes-btn is-primary" 
+            onclick="window.location.href='mailto:yourschool@univ.ac.kr';">
+      📧 Send Mail (학교)
+    </button>
+
+    <button type="button" class="nes-btn is-success" 
+            onclick="window.location.href='mailto:yourname@gmail.com';" 
+            style="margin-left:10px;">
+      📧 Send Mail (개인)
+    </button>
+  </section>
+  <!-- Inventory -->
+<section class="nes-container with-title is-rounded" style="font-size:18px; margin-top:20px;">
+  <h2 class="title">🎒 Inventory</h2>
+
+  <div style="display:grid; grid-template-columns: repeat(4, 1fr); gap:20px; text-align:center;">
+    <div>
+      <i class="nes-icon is-medium star"></i>
+      <p>C++</p>
+    </div>
+    <div>
+      <i class="nes-icon is-medium heart"></i>
+      <p>Python</p>
+    </div>
+    <div>
+      <i class="nes-icon is-medium like"></i>
+      <p>HTML/CSS</p>
+    </div>
+    <div>
+      <i class="nes-icon is-medium trophy"></i>
+      <p>Git/GitHub</p>
+    </div>
+    <div>
+      <i class="nes-icon is-medium coin"></i>
+      <p>Java</p>
+    </div>
+    <div>
+      <i class="nes-icon is-medium flask"></i>
+      <p>Machine Learning</p>
+    </div>
+    <div>
+      <i class="nes-icon is-medium skull"></i>
+      <p>알고리즘</p>
+    </div>
+    <div>
+      <i class="nes-icon is-medium bulbasaur"></i>
+      <p>Project</p>
+    </div>
+  </div>
+</section>
+
+</body>
+</html>
