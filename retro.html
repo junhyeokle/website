@@ -60,9 +60,26 @@
       transform: scale(1.03);
       transition: 0.15s;
     }
+
+    /* 페이지 전환 버튼 */
+    .page-switch {
+      text-align: center;
+      margin-bottom: 30px;
+    }
   </style>
 </head>
 <body>
+
+  <!-- 페이지 전환 버튼 -->
+  <div class="page-switch">
+    <button type="button" class="nes-btn is-primary" disabled>
+      🎮 NES.css 버전
+    </button>
+    <button type="button" class="nes-btn is-success" onclick="window.location.href='bootstrap.html'">
+      💾 BOOTSTRA.386 버전
+    </button>
+  </div>
+
   <!-- About Me -->
   <section class="nes-container with-title is-rounded" 
            style="font-size:18px; display:flex; align-items:center; gap:40px;">
@@ -135,66 +152,69 @@
 
     <p>
       <i class="nes-icon gmail is-medium"></i>
-      <strong>학교 메일:</strong> junhyeokle@khu.ac.kr
+      <strong>학교 메일:</strong> yourschool@univ.ac.kr
     </p>
 
     <p>
       <i class="nes-icon gmail is-medium"></i>
-      <strong>개인 메일:</strong> somenightstomorrow@gmail.com
+      <strong>개인 메일:</strong> yourname@gmail.com
     </p>
 
     <button type="button" class="nes-btn is-primary" 
-            onclick="window.location.href='mailto:junhyeokle@khu.ac.kr';">
+            onclick="window.location.href='mailto:yourschool@univ.ac.kr';">
       📧 Send Mail (학교)
     </button>
 
     <button type="button" class="nes-btn is-success" 
-            onclick="window.location.href='mailto:somenightstomorrow@gmail.com';" 
+            onclick="window.location.href='mailto:yourname@gmail.com';" 
             style="margin-left:10px;">
       📧 Send Mail (개인)
     </button>
   </section>
-  <!-- Inventory -->
-<section class="nes-container with-title is-rounded" style="font-size:18px; margin-top:20px;">
-  <h2 class="title">🎒 Inventory</h2>
 
-  <div style="display:grid; grid-template-columns: repeat(4, 1fr); gap:20px; text-align:center;">
-    <div>
-      <i class="nes-icon is-medium star"></i>
-      <p>C++</p>
+  <!-- Inventory -->
+  <section class="nes-container with-title is-rounded" style="font-size:18px; margin-top:20px;">
+    <h2 class="title">🎒 Inventory</h2>
+
+    <div style="display:grid; grid-template-columns: repeat(4, 1fr); gap:20px; text-align:center;">
+      <div>
+        <i class="nes-icon is-medium star"></i>
+        <p>C++</p>
+      </div>
+      <div>
+        <i class="nes-icon is-medium heart"></i>
+        <p>Python</p>
+      </div>
+      <div>
+        <i class="nes-icon is-medium like"></i>
+        <p>HTML/CSS</p>
+      </div>
+      <div>
+        <i class="nes-icon is-medium trophy"></i>
+        <p>Git/GitHub</p>
+      </div>
+      <div>
+        <i class="nes-icon is-medium coin"></i>
+        <p>Java</p>
+      </div>
+      <div>
+        <i class="nes-icon is-medium flask"></i>
+        <p>Machine Learning</p>
+      </div>
+      <div>
+        <i class="nes-icon is-medium skull"></i>
+        <p>알고리즘</p>
+      </div>
+      <div>
+        <i class="nes-icon is-medium bulbasaur"></i>
+        <p>Project</p>
+      </div>
     </div>
-    <div>
-      <i class="nes-icon is-medium heart"></i>
-      <p>Python</p>
-    </div>
-    <div>
-      <i class="nes-icon is-medium like"></i>
-      <p>HTML/CSS</p>
-    </div>
-    <div>
-      <i class="nes-icon is-medium trophy"></i>
-      <p>Git/GitHub</p>
-    </div>
-    <div>
-      <i class="nes-icon is-medium coin"></i>
-      <p>Java</p>
-    </div>
-    <div>
-      <i class="nes-icon is-medium flask"></i>
-      <p>Machine Learning</p>
-    </div>
-    <div>
-      <i class="nes-icon is-medium skull"></i>
-      <p>알고리즘</p>
-    </div>
-    <div>
-      <i class="nes-icon is-medium bulbasaur"></i>
-      <p>Project</p>
-    </div>
-  </div>
-</section>
+  </section>
 
 </body>
 </html>
+
+
 
 
